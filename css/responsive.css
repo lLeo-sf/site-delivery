@@ -1,0 +1,95 @@
+@media only screen and (max-width: 900px) {
+    .header {
+        display: flex;
+        justify-content: start;
+        height: 100vh;
+        padding-top: 20%;
+    }
+    .header input {
+        width: 80vw;
+        height: 6vh;
+    }
+    .sugestions {
+        width: 80vw;
+        background: none;
+        overflow-x: auto;
+    }
+    .sugestion {
+        width: 500px;
+    }
+    .slider {
+        margin-top: -70vh;
+        height: 100vh;
+    }
+    .slide a {
+        display: inline;
+    }
+    #menuList {
+        width: 90vw;
+        z-index: 5;
+        position: absolute;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu a {
+        margin-top: 10%;
+    }
+    .itemsCardapio {
+        margin-top: 20%;
+    }
+    .itemCardapio {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .icon {
+        width: 100%;
+        height: 100%
+    }
+    .com {
+        display: flex;
+        width: 100%;
+    }
+    .com span {
+        display: block;
+    }
+    .location {
+        display: flex;
+        justify-self: flex-start;
+        align-items: center;
+    }
+    .contato {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    .contato form {
+        width: 80%;
+        height: 80%;
+        margin-top: 10%;
+    }
+    .contato input {
+        width: 80vw;
+    }
+    .contato textarea {
+        width: 80vw
+    }
+    #items {
+        left: 0;
+    }
+    #prev {
+        display: none;
+    }
+    #next {
+        display: none;
+    }
+    #items {
+        width: auto;
+    }
+    .slide {
+        margin-top: 5%;
+    }
+}

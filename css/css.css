@@ -1,0 +1,455 @@
+body {
+    margin: 0 auto;
+    padding: 0 auto;
+    overflow-x: hidden;
+}
+
+:root {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.sugestion button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.header input {
+    width: 60%;
+    height: 100px;
+    outline: none;
+    border: none;
+    font-size: 14pt;
+    border-radius: 25px;
+    padding-left: 1%;
+    box-shadow: 20px 20px 20px -10px rgba(0, 0, 0, 1);
+}
+
+.toggle {
+    width: 40px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+    margin: 5%;
+}
+
+.toggle span {
+    width: 100%;
+    height: 5px;
+    margin-bottom: 20%;
+    background: white;
+}
+
+.toggle nav {
+    position: absolute;
+    width: calc(100vmax - 190px);
+    height: 500px;
+    background: rgba(248, 79, 82, 0.9);
+    margin-top: 100%;
+    margin-left: 0px;
+}
+
+.menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20pt;
+    margin-left: 5%;
+    letter-spacing: 10px;
+}
+
+.menu a:hover {
+    font-size: 28pt;
+}
+
+.hidden {
+    display: none;
+}
+
+.sugestions {
+    width: 60%;
+    height: 50px;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.sugestion {
+    flex: 1;
+    height: 50%;
+    background: rgb(231, 231, 231);
+    margin-right: 1%;
+    margin-left: 1%;
+    box-shadow: 7px 5px 45px 5px #000000;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sugestion span {
+    font-weight: bold;
+}
+
+.sugestion:hover {
+    margin-top: -0.5%;
+}
+
+.slider {
+    width: 90%;
+    height: 200px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin-left: 5%;
+    margin-top: -15%;
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#items {
+    width: 10000px;
+    position: relative;
+    top: 0;
+    left: 100px;
+}
+
+#items.shifting {
+    transition: left .2s ease-out;
+}
+
+.slide {
+    width: 350px;
+    height: 150px;
+    cursor: pointer;
+    float: left;
+    display: flex;
+    flex-direction: row;
+    transition: all 1s;
+    position: relative;
+    background: #f84f52;
+    margin-right: 0.5%;
+}
+
+.slide a {
+    font-size: 20pt;
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    margin-left: 92%;
+}
+
+.slide a:hover {
+    color: #000000;
+    transition: .2s;
+}
+
+.img {
+    width: 40%;
+    height: 100%;
+    display: flex;
+}
+
+.img img {
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.info {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info h4 {
+    color: white;
+    font-size: 16pt;
+}
+
+.info p {
+    color: white;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.control {
+    position: absolute;
+    top: 40%;
+    width: 40px;
+    height: 40px;
+    margin-left: 2%;
+    margin-right: 2%;
+    background: #fff;
+    border-radius: 20px;
+    margin-top: -20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.prev,
+.next {
+    background-size: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.prev {
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+    left: -20px;
+}
+
+.next {
+    background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+    right: -20px;
+}
+
+.prev:active,
+.next:active {
+    transform: scale(0.8);
+}
+
+.showItem {
+    position: absolute;
+    width: 80%;
+    height: 60vh;
+    margin: 2% 10%;
+    display: flex;
+}
+
+.imgItem {
+    flex: 2;
+    height: 100%;
+}
+
+.imgItem img {
+    width: 100%;
+    height: 100%;
+}
+
+.desc {
+    flex: 3;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(000, 000, 000, 0.8);
+    color: white;
+}
+
+.desc p {
+    margin: 5%;
+    text-align: justify;
+}
+
+.desc button {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: #f84f52;
+    color: white;
+    cursor: pointer;
+    font-size: 16pt;
+    outline: none;
+}
+
+.desc button:active {
+    transform: scale(0.8);
+}
+
+#close {
+    width: 3%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: #f84f52;
+    color: white;
+    cursor: pointer;
+    font-size: 16pt;
+    outline: none;
+    position: absolute;
+    margin-left: 96%;
+    margin-top: 1%;
+}
+
+.cardapio {
+    width: 100%;
+    height: 2100px;
+    background-image: linear-gradient(to right top, #f84f52, #f85a5d, #f76567, #f66e71, #f4787b);
+    display: flex;
+}
+
+.itemsCardapio {
+    width: 80%;
+    height: 2000px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.itemCardapio {
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.icon {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 32px 1px rgba(24, 24, 24, 0.81);
+    flex-direction: column;
+    float: left;
+}
+
+.icon img {
+    max-width: 50%;
+    max-height: 50%;
+    background-size: cover;
+}
+
+.com {
+    float: left;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.com h3 {
+    color: #f84f52;
+    margin-left: 5%;
+}
+
+.com span {
+    color: black;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #f76567;
+    flex-direction: column;
+}
+
+.location h1 {
+    color: white;
+}
+
+.location img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.rss {
+    display: flex;
+    width: 100%;
+    height: 10%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.rss img {
+    max-width: 30%;
+    max-height: 30%;
+    filter: invert(.8);
+    margin-left: 1%;
+    cursor: pointer;
+}
+
+.rss img:hover {
+    transform: scale(1.2);
+}
+
+.contato {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f76567;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato h1 {
+    color: white;
+}
+
+.contato input {
+    width: 100vh;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 25px;
+    padding-left: 20px;
+    outline: none;
+    font-size: 14pt;
+}
+
+.contato textarea {
+    width: 100vh;
+    height: 40vh;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-size: 18pt;
+    padding: 5%;
+    resize: none;
+}
+
+#send:active {
+    transform: scale(.8);
+}

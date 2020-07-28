@@ -1,0 +1,101 @@
+@media only screen and (max-width: 1080px) {
+     :root {
+        font-family: 'Roboto', sans-serif;
+        --dark1: #121212;
+        --dark2: #181818;
+        --dark3: #222222;
+        --red: #fd4e45;
+        --blue: #2793e6;
+        --gray: #909090;
+        --white: #fff;
+    }
+    .top {
+        width: 100%;
+        height: 10%;
+        background: var(--dark1);
+    }
+    .title {
+        display: none;
+    }
+    .search input {
+        width: 70%;
+    }
+    .Perfil {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
+    .toggleMenu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 30;
+        font-size: 16pt;
+    }
+    .content {
+        width: 100%;
+        background: var(--dark3);
+    }
+    .hidden {
+        display: none;
+    }
+    .show {
+        display: initial;
+    }
+    .toggle {
+        background-color: rgba(10, 10, 10, 0.2);
+        filter: opacity(0.96);
+        -webkit-box-shadow: 0px 0px 300px -38px rgba(94, 94, 94, 0.65);
+        -moz-box-shadow: 0px 0px 300px -38px rgba(94, 94, 94, 0.65);
+        box-shadow: 0px 0px 300px -38px rgba(94, 94, 94, 0.65);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .toggle li {
+        list-style: none;
+        color: black;
+        margin-top: 30;
+    }
+    .toggle a {
+        text-decoration: none;
+        color: white;
+        font-size: 20pt;
+        margin-left: 30;
+    }
+    .toggle i {
+        font-size: 20pt;
+        color: var(--blue);
+    }
+    .toggle nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .resume {
+        flex-direction: column;
+        flex: 1;
+    }
+    #lupa {
+        display: none;
+    }
+    .task {
+        flex-direction: column;
+    }
+    .box1 {
+        width: 100%;
+        height: 20%;
+        justify-content: unset;
+        align-items: baseline;
+    }
+    .wrapper {
+        display: none;
+    }
+}
